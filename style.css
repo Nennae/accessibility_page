@@ -43,12 +43,13 @@
 }
 
 .main div .titles, .main .lists-container .titles {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-bottom: 20px;
+  letter-spacing: 1.3px;
 }
 
-.main div .info-text, .main .lists-container .info-text {
-  font-size: 1.25rem;
+.main div .info-text, .main div .list, .main .lists-container .info-text, .main .lists-container .list {
+  font-size: 1.35rem;
   margin-bottom: 40px;
 }
 
@@ -81,15 +82,13 @@
 }
 
 .main .lists-container .list-title {
-  color: #031c36;
+  color: #f9f9f9;
   min-width: 200px;
 }
 
 .main .lists-container .list {
   color: black;
-  padding-bottom: 40px;
   list-style: circle;
-  font-size: 1.25rem;
 }
 
 .main .lists-container .list-item {

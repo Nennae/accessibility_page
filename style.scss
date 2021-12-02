@@ -3,7 +3,7 @@ $light-color: #f9f9f9;
 $darker-color: rgb(17, 69, 124);
 $dark-color:rgb(3, 28, 54);
 $neutral-color: rgb(158, 200, 248);
-$titles-font: 'Titillium Web', sans-serif;
+$titles-font:'Titillium Web', sans-serif;
 $maintext-font: 'Montserrat', sans-serif;
 
 * {
@@ -42,11 +42,12 @@ $maintext-font: 'Montserrat', sans-serif;
       div, .lists-container {
             padding: 20px 40px;
             .titles {
-                  font-size: 1.3rem;
+                  font-size: 1.5rem;
                   margin-bottom: 20px; 
+                  letter-spacing: 1.3px;
             }
-            .info-text {
-                  font-size: 1.25rem;
+            .info-text, .list {
+                  font-size: 1.35rem;
                   margin-bottom: 40px;
             }
       }
@@ -71,14 +72,12 @@ $maintext-font: 'Montserrat', sans-serif;
       .lists-container {
             background-color: $neutral-color;
             .list-title {
-                  color: $dark-color;
+                  color: $light-color;
                   min-width: 200px;
             }
             .list {
                   color: black;
-                  padding-bottom: 40px;
                   list-style: circle;
-                  font-size: 1.25rem;
             }
             .list-item {
                   margin-bottom: 10px;
