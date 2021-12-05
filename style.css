@@ -40,6 +40,11 @@
   position: relative;
 }
 
+.main .titles {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
 .main .access-icon {
   color: rgba(153, 208, 245, 0.4);
   font-size: 170px;
@@ -48,17 +53,11 @@
   right: 5%;
 }
 
-.main div, .main .lists-container {
-  padding: 20px 40px;
+.main div, .main .lists-container, .main .ext-links {
+  padding: 20px 140px;
 }
 
-.main div .titles, .main .lists-container .titles {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  letter-spacing: 1.3px;
-}
-
-.main div .info-text, .main div .list, .main .lists-container .info-text, .main .lists-container .list {
+.main div .info-text, .main div .list, .main div .image-text, .main .lists-container .info-text, .main .lists-container .list, .main .lists-container .image-text, .main .ext-links .info-text, .main .ext-links .list, .main .ext-links .image-text {
   font-size: 1.35rem;
   margin-bottom: 20px;
 }
@@ -113,13 +112,9 @@
 
 .main .ext-links {
   background-color: #11457c;
-  padding: 20px 40px;
 }
 
 .main .ext-links .ext-title {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  letter-spacing: 1.3px;
   color: #f7af43;
 }
 
@@ -128,7 +123,6 @@
   border: 3px solid #f7af43;
   border-radius: 10px;
   margin-top: 30px;
-  font-size: 1.37rem;
   min-height: 220px;
   background-color: #f9f9f9;
 }
@@ -145,5 +139,14 @@
 .main .ext-links .image-link {
   width: 250px;
   padding: 30px;
+}
+
+.main .footer {
+  background-color: blue;
+  min-height: 300px;
+}
+
+.main .footer .footer-text {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

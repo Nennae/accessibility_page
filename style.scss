@@ -8,7 +8,7 @@ $titles-font:'Titillium Web', sans-serif;
 $maintext-font: 'Montserrat', sans-serif;
 
 @mixin mq($size){
-      @media only screen(min-width: $size) {
+      @media only screen and(min-width: $size) {
             @content;
       }
 }
@@ -65,7 +65,8 @@ $maintext-font: 'Montserrat', sans-serif;
 
       div, .lists-container, .ext-links {
             padding: 20px 140px;
-            .info-text, .list, .image-link {
+
+            .info-text, .list, .image-text {
                   font-size: 1.35rem;
                   margin-bottom: 20px;
             }
@@ -151,5 +152,10 @@ $maintext-font: 'Montserrat', sans-serif;
       }
       
       .footer {
+            background-color: blue;
+            min-height: 300px;
+            .footer-text {
+                  text-align: center;
+            }
       }
 }
