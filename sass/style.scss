@@ -2,10 +2,16 @@
 $light-color: #f9f9f9;
 $darker-color: rgb(17, 69, 124);
 $dark-color:rgb(3, 28, 54);
-$neutral-color: rgb(76, 151, 238);
+$neutral-color: rgb(104, 166, 231);
 $clear-color: rgb(247, 175, 67);
 $titles-font:'Titillium Web', sans-serif;
 $maintext-font: 'Montserrat', sans-serif;
+
+@mixin mq($size){
+      @media only screen(min-width: $size) {
+            @content;
+      }
+}
 
 * {
       box-sizing: border-box;
@@ -19,6 +25,7 @@ $maintext-font: 'Montserrat', sans-serif;
       font-family: $titles-font;
       margin-top: 30px;
       text-align: center;
+      
 }
 
 .header {
@@ -41,63 +48,108 @@ $maintext-font: 'Montserrat', sans-serif;
 
 .main {
       line-height: 1.6;
-      div, .lists-container {
-            padding: 20px 40px;
-            .titles {
-                  font-size: 1.5rem;
-                  margin-bottom: 20px; 
-                  letter-spacing: 1.3px;
-            }
-            .info-text, .list {
+      position: relative;
+
+      .titles {
+            font-size: 1.5rem;
+            margin-bottom: 20px; 
+      }
+
+      .access-icon {
+            color: rgba(153, 208, 245, 0.4);
+            font-size: 170px;
+            position: absolute;
+            bottom: 77%;
+            right: 5%;
+      }
+
+      div, .lists-container, .ext-links {
+            padding: 20px 140px;
+            .info-text, .list, .image-link {
                   font-size: 1.35rem;
-            }
-            .access-icon {
-                  color: $neutral-color;
-                  font-size: 150px;
-                  display: flex;
-                  justify-content: flex-end;
+                  margin-bottom: 20px;
             }
       }
+
       .light-container {
             background-color: $light-color;
+
             .darker-title {
                   color: $darker-color;
             }
+
             .dark-text {
                   color: $dark-color;
             }
       }
+
       .darker-container {
             background-color: $darker-color;
+
             .neutral-title {
                   color: $clear-color;
             }
+
             .light-text {
                   color: $light-color;
             }
-            .sign-language-icon {
-                  margin-right: 20px;
-                  font-size: 60px;
-                  color: $neutral-color;
-            }
       }
+
       .lists-container {
             background-color: $neutral-color;
+
             .list-title {
                   color: $light-color;
                   min-width: 200px;
+
                   i {
                         color: $dark-color;
-                        font-size: 50px;
+                        font-size: 35px;
                         margin-right: 20px;
                   }
             }
+
             .list {
                   color: black;
                   list-style: circle;
             }
+
             .list-item {
                   margin-bottom: 10px;
             }
+      }
+
+      .ext-links {
+            background-color: $darker-color;
+
+            .ext-title {
+                  color: $clear-color;
+            }
+
+            .image-links {
+                  text-align: center;
+                  border: 3px solid $clear-color;
+                  border-radius: 10px;
+                  margin-top: 30px; 
+                  min-height: 220px;
+                  background-color: $light-color;
+
+                  &:hover {
+                        background-color: $neutral-color;
+                  }
+
+                  a {
+                        text-decoration: none;
+                        color: $dark-color;
+                  }
+            }
+
+            .image-link {
+                  width: 250px;
+                  padding: 30px;
+            }
+      }
+      
+      .footer {
       }
 }
