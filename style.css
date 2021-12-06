@@ -54,7 +54,7 @@
 }
 
 .main div, .main .lists-container, .main .ext-links {
-  padding: 20px 140px;
+  padding: 20px 50px;
 }
 
 .main div .info-text, .main div .list, .main div .image-text, .main .lists-container .info-text, .main .lists-container .list, .main .lists-container .image-text, .main .ext-links .info-text, .main .ext-links .list, .main .ext-links .image-text {
@@ -112,10 +112,12 @@
 
 .main .ext-links {
   background-color: #11457c;
+  padding-bottom: 100px;
 }
 
 .main .ext-links .ext-title {
   color: #f7af43;
+  margin-bottom: 50px;
 }
 
 .main .ext-links .image-links {
@@ -141,12 +143,12 @@
   padding: 30px;
 }
 
-.main .footer {
-  background-color: blue;
-  min-height: 300px;
+.footer {
+  background-color: #f9f9f9;
+  padding: 50px;
 }
 
-.main .footer .footer-text {
+.footer .footer-text {
   text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
