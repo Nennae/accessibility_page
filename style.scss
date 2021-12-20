@@ -7,11 +7,6 @@ $clear-color: rgb(247, 175, 67);
 $titles-font:'Titillium Web', sans-serif;
 $maintext-font: 'Montserrat', sans-serif;
 
-@mixin mq($size){
-      @media only screen and(min-width: $size) {
-            @content;
-      }
-}
 
 * {
       box-sizing: border-box;
@@ -23,7 +18,7 @@ $maintext-font: 'Montserrat', sans-serif;
 .sub-text,
 .titles {
       font-family: $titles-font;
-      margin-top: 30px;
+      padding-top: 30px;
       text-align: center;
       
 }
@@ -50,30 +45,31 @@ $maintext-font: 'Montserrat', sans-serif;
       line-height: 1.6;
       position: relative;
 
+      p {
+            max-width: 900px;
+            margin: 0 auto;
+      }
+
       .titles {
             font-size: 1.5rem;
-            margin-bottom: 20px; 
+            margin-bottom: 40px; 
       }
 
       .access-icon {
-            color: rgba(153, 208, 245, 0.4);
-            font-size: 170px;
+            color: rgba(235, 139, 14, 0.4);
+            font-size: 200px;
             position: absolute;
-            bottom: 77%;
+            bottom: 80%;
             right: 5%;
       }
 
-      div, .lists-container, .ext-links {
-            padding: 20px 50px;
-
             .info-text, .list, .image-text {
                   font-size: 1.35rem;
-                  margin-bottom: 20px;
             }
-      }
 
       .light-container {
             background-color: $light-color;
+            padding: 40px 30px 100px;
 
             .darker-title {
                   color: $darker-color;
@@ -86,6 +82,7 @@ $maintext-font: 'Montserrat', sans-serif;
 
       .darker-container {
             background-color: $darker-color;
+            padding: 40px 30px 150px;
 
             .neutral-title {
                   color: $clear-color;
@@ -98,10 +95,15 @@ $maintext-font: 'Montserrat', sans-serif;
 
       .lists-container {
             background-color: $neutral-color;
-
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0px 100px;
+            
             .list-title {
                   color: $light-color;
-                  min-width: 200px;
+                  min-width: 300px;
 
                   i {
                         color: $dark-color;
@@ -113,10 +115,13 @@ $maintext-font: 'Montserrat', sans-serif;
             .list {
                   color: black;
                   list-style: circle;
+                  max-width: 500px;
+                  margin-left: 30px;
+                  padding: 0px 20px;
             }
 
             .list-item {
-                  margin-bottom: 10px;
+                  margin-bottom: 20px;
             }
       }
 
@@ -126,33 +131,70 @@ $maintext-font: 'Montserrat', sans-serif;
 
             .ext-title {
                   color: $clear-color;
-                  margin-bottom: 50px;
+                  margin-bottom: 40px;
+                  
             }
 
-            .image-links {
-                  text-align: center;
-                  border: 3px solid $clear-color;
-                  border-radius: 10px;
-                  margin-top: 30px; 
-                  min-height: 220px;
-                  background-color: $light-color;
-
-                  &:hover {
-                        background-color: $neutral-color;
+            .link-wrapper {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: space-around;
+                  
+                  .image-text {
+                        align-self: initial;
+                  }
+                  .wave {
+                        align-self: flex-end;
+                        margin-top: 52px;
                   }
 
-                  a {
-                        text-decoration: none;
-                        color: $dark-color;
-                  }
-            }
+                  .image-links {
+                        text-align: center;
+                        border: 3px solid $clear-color;
+                        border-radius: 10px;
+                        margin-top: 30px; 
+                        background-color: $light-color;
+                        max-width: 400px;
+                        height: 250px;
+                        padding: 30px;
+      
+                        &:hover {
+                              background-color: $neutral-color;
+                        }
 
-            .image-link {
-                  width: 250px;
-                  padding: 30px;
+                        img {
+                              max-width: 300px;
+                        }
+      
+                        a {
+                              text-decoration: none;
+                              color: $dark-color;
+                        }
+                  }
             }
       }
+
 }
+      
+      @media only screen and(min-width: 600px) {
+            .header {
+                  height: 400px;
+                  .page-title {
+                        font-size: 4rem;
+                  }
+                  .sub-text {
+                        font-size: 1.7rem;
+                  }
+            }
+                  .lists-container {
+                        flex-direction: row;
+                        .list {
+                              margin: 60px;
+                        }
+            }
+            
+      }
+
 
 .footer {
       background-color: $light-color;

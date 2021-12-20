@@ -9,7 +9,7 @@
 .sub-text,
 .titles {
   font-family: "Titillium Web", sans-serif;
-  margin-top: 30px;
+  padding-top: 30px;
   text-align: center;
 }
 
@@ -40,30 +40,31 @@
   position: relative;
 }
 
+.main p {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .main .titles {
   font-size: 1.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .main .access-icon {
-  color: rgba(153, 208, 245, 0.4);
-  font-size: 170px;
+  color: rgba(235, 139, 14, 0.4);
+  font-size: 200px;
   position: absolute;
-  bottom: 77%;
+  bottom: 80%;
   right: 5%;
 }
 
-.main div, .main .lists-container, .main .ext-links {
-  padding: 20px 50px;
-}
-
-.main div .info-text, .main div .list, .main div .image-text, .main .lists-container .info-text, .main .lists-container .list, .main .lists-container .image-text, .main .ext-links .info-text, .main .ext-links .list, .main .ext-links .image-text {
+.main .info-text, .main .list, .main .image-text {
   font-size: 1.35rem;
-  margin-bottom: 20px;
 }
 
 .main .light-container {
   background-color: #f9f9f9;
+  padding: 40px 30px 100px;
 }
 
 .main .light-container .darker-title {
@@ -76,6 +77,7 @@
 
 .main .darker-container {
   background-color: #11457c;
+  padding: 40px 30px 150px;
 }
 
 .main .darker-container .neutral-title {
@@ -88,11 +90,23 @@
 
 .main .lists-container {
   background-color: #68a6e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 0px 100px;
 }
 
 .main .lists-container .list-title {
   color: #f9f9f9;
-  min-width: 200px;
+  min-width: 300px;
 }
 
 .main .lists-container .list-title i {
@@ -104,10 +118,13 @@
 .main .lists-container .list {
   color: black;
   list-style: circle;
+  max-width: 500px;
+  margin-left: 30px;
+  padding: 0px 20px;
 }
 
 .main .lists-container .list-item {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .main .ext-links {
@@ -117,30 +134,74 @@
 
 .main .ext-links .ext-title {
   color: #f7af43;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
-.main .ext-links .image-links {
+.main .ext-links .link-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main .ext-links .link-wrapper .image-text {
+  -ms-flex-item-align: initial;
+      -ms-grid-row-align: initial;
+      align-self: initial;
+}
+
+.main .ext-links .link-wrapper .wave {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-top: 52px;
+}
+
+.main .ext-links .link-wrapper .image-links {
   text-align: center;
   border: 3px solid #f7af43;
   border-radius: 10px;
   margin-top: 30px;
-  min-height: 220px;
   background-color: #f9f9f9;
+  max-width: 400px;
+  height: 250px;
+  padding: 30px;
 }
 
-.main .ext-links .image-links:hover {
+.main .ext-links .link-wrapper .image-links:hover {
   background-color: #68a6e7;
 }
 
-.main .ext-links .image-links a {
+.main .ext-links .link-wrapper .image-links img {
+  max-width: 300px;
+}
+
+.main .ext-links .link-wrapper .image-links a {
   text-decoration: none;
   color: #031c36;
 }
 
-.main .ext-links .image-link {
-  width: 250px;
-  padding: 30px;
+@media only screen and (min-width: 600px) {
+  .header {
+    height: 400px;
+  }
+  .header .page-title {
+    font-size: 4rem;
+  }
+  .header .sub-text {
+    font-size: 1.7rem;
+  }
+  .lists-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .lists-container .list {
+    margin: 60px;
+  }
 }
 
 .footer {
