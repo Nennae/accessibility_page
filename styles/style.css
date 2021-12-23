@@ -8,7 +8,7 @@
 .page-title,
 .sub-text,
 .titles {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Titillium Web", sans-serif, verdana;
   padding-top: 30px;
   text-align: center;
 }
@@ -24,7 +24,7 @@
   width: 100%;
   min-height: 200px;
   padding: 50px;
-  color: #f9f9f9;
+  color: #f1f5f7;
 }
 
 .header .page-title {
@@ -32,7 +32,8 @@
 }
 
 .header .sub-text {
-  font-weight: bold;
+  font-style: italic;
+  font-size: 1.4rem;
 }
 
 .main {
@@ -54,7 +55,7 @@
   color: rgba(235, 139, 14, 0.4);
   font-size: 200px;
   position: absolute;
-  bottom: 80%;
+  bottom: 81%;
   right: 5%;
 }
 
@@ -63,7 +64,7 @@
 }
 
 .main .light-container {
-  background-color: #f9f9f9;
+  background-color: #f1f5f7;
   padding: 40px 30px 100px;
 }
 
@@ -85,7 +86,7 @@
 }
 
 .main .darker-container .light-text {
-  color: #f9f9f9;
+  color: #f1f5f7;
 }
 
 .main .lists-container {
@@ -98,14 +99,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 40px 0px 100px;
 }
 
 .main .lists-container .list-title {
-  color: #f9f9f9;
+  color: #f1f5f7;
   min-width: 300px;
 }
 
@@ -164,7 +162,7 @@
   border: 3px solid #f7af43;
   border-radius: 10px;
   margin-top: 30px;
-  background-color: #f9f9f9;
+  background-color: #f1f5f7;
   max-width: 400px;
   height: 250px;
   padding: 30px;
@@ -199,13 +197,16 @@
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .lists-container h3 {
+    text-align: left;
+  }
   .lists-container .list {
     margin: 60px;
   }
 }
 
 .footer {
-  background-color: #f9f9f9;
+  background-color: #f1f5f7;
   padding: 50px;
 }
 

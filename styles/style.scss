@@ -1,11 +1,11 @@
 
-$light-color: #f9f9f9;
+$light-color: #f1f5f7;
 $darker-color: rgb(17, 69, 124);
 $dark-color:rgb(3, 28, 54);
 $neutral-color: rgb(104, 166, 231);
-$clear-color: rgb(247, 175, 67);
-$titles-font:'Titillium Web', sans-serif;
-$maintext-font: 'Montserrat', sans-serif;
+$bright-color: rgb(247, 175, 67);
+$titles-font:'Titillium Web', sans-serif, verdana;
+$maintext-font: 'Montserrat', sans-serif, arial;
 
 
 * {
@@ -33,11 +33,13 @@ $maintext-font: 'Montserrat', sans-serif;
       min-height: 200px;
       padding: 50px;
       color: $light-color;
+
       .page-title {
             font-size: 2.5rem;
       }
       .sub-text {
-            font-weight: bold;
+            font-style: italic;
+            font-size: 1.4rem;
       }
 }
 
@@ -59,7 +61,7 @@ $maintext-font: 'Montserrat', sans-serif;
             color: rgba(235, 139, 14, 0.4);
             font-size: 200px;
             position: absolute;
-            bottom: 80%;
+            bottom: 81%;
             right: 5%;
       }
 
@@ -85,7 +87,7 @@ $maintext-font: 'Montserrat', sans-serif;
             padding: 40px 30px 150px;
 
             .neutral-title {
-                  color: $clear-color;
+                  color: $bright-color;
             }
 
             .light-text {
@@ -98,7 +100,6 @@ $maintext-font: 'Montserrat', sans-serif;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
             padding: 40px 0px 100px;
             
             .list-title {
@@ -130,7 +131,7 @@ $maintext-font: 'Montserrat', sans-serif;
             padding-bottom: 100px;
 
             .ext-title {
-                  color: $clear-color;
+                  color: $bright-color;
                   margin-bottom: 40px;
                   
             }
@@ -150,7 +151,7 @@ $maintext-font: 'Montserrat', sans-serif;
 
                   .image-links {
                         text-align: center;
-                        border: 3px solid $clear-color;
+                        border: 3px solid $bright-color;
                         border-radius: 10px;
                         margin-top: 30px; 
                         background-color: $light-color;
@@ -188,13 +189,15 @@ $maintext-font: 'Montserrat', sans-serif;
             }
                   .lists-container {
                         flex-direction: row;
+                        h3 {
+                              text-align: left;
+                        }
                         .list {
                               margin: 60px;
                         }
             }
             
       }
-
 
 .footer {
       background-color: $light-color;
